@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang=en-ca>
+<meta name=viewport content=width=device-width,initial-scale=1>
+<meta name=color-scheme content="light dark">
+<title>Text Zoom Observer</title>
+<style>
+main::after {
+	content: "No" / "No";
+}
+
+:root:has(text-zoom-observer:state(zoomed)) main::after {
+	content: "Yes" / "Yes";
+}
+</style>
+<main>
+	<h1>Is the text zoomed?</h1>
+</main>
+<text-zoom-observer></text-zoom-observer>
+<script src="text-zoom-observer-element.js"></script>
